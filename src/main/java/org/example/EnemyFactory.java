@@ -1,6 +1,6 @@
 package org.example;
 
-public class EnemyFactor {
+public class EnemyFactory {
 //    "Corp Guard", "Basic trained soldier, works in squads, calls backup",
 //            "Razor Gang Member", "Aggressive melee, cheap implants, berserker rage",
 //            "Netrunner Operative", "Hangs back, hacks your gear/HUD mid-fight",

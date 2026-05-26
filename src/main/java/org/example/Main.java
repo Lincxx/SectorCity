@@ -60,7 +60,7 @@ public class Main {
 
         System.out.println(hero.toString());
 
-        Enemy enemy = new HumanEnemy("Corp Guard", "Franklin",100, 20, 10);
+
 
 
         sc.close();

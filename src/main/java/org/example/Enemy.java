@@ -56,8 +56,6 @@ public class Enemy extends Player{
 //    Ghost — Netrunner who exists simultaneously in digital and physical space
 //    The Overseer — Corporate executive in a full military mech suit
 
-    HumanEnemy he = new HumanEnemy("Corp Guard", "Franklin",100, 20, 10);
-
     public Enemy(String name, int health, int attack, int defense) {
         super(name, health, attack, defense);
     }

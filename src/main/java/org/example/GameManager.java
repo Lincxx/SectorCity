@@ -75,9 +75,25 @@ public class GameManager {
         sc.close();
     }
 
+    public Hero getHero() {
+        return hero;
+    }
+
+    public List<Enemy> getEnemies() {
+        return enemies;
+    }
+
+    public Enemy getARandomEnemy() {
+        int index = (int) (Math.random() * enemies.size());
+        return getEnemies().get(index);
+        //return enemies.get(index);
+    }
+
     public void startGame() {
         setupHero();
         setupEnemies();
+        System.out.println(getARandomEnemy());
+
         // run game loop
     }
 

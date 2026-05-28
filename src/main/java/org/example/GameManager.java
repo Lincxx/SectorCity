@@ -12,6 +12,8 @@ public class GameManager {
     public void intro() {
         System.out.println("Welcome to Sector City");
         System.out.print("---------------------------------------");
+        Scanner next = new Scanner(System.in);
+        String nothing = next.nextLine(); //Make sure the user presses enter to continue
         System.out.println("\n\nThis is a text-based RPG game set in a dystopian future where players take on the role of heroes in a dangerous\nand complex world.\n");
         System.out.println("The game features a variety of classes, each with their own unique abilities and playstyles, allowing players to \ncustomize their character and approach to combat.\n");
         System.out.println("Players can choose from a range of classes, including street-level fighters, tech and hacking specialists, gunners,\nbiohackers, and social manipulators, each with their own strengths and weaknesses.\n");
@@ -26,6 +28,8 @@ public class GameManager {
     }
     public void setupHero() {
         intro();
+        Scanner next = new Scanner(System.in);
+        String nothing = next.nextLine(); //Make sure the user presses enter to continue
 
         //Picking a class
         System.out.print("\n\n---------------------------------------\n\n");
@@ -63,14 +67,11 @@ public class GameManager {
         String charName = sc.next();
 
         //Welcome to the game
-        System.out.println("Welcome to Sector City");
+        System.out.println("Welcome to Sector City " + charName + "!");
         System.out.println("---------------------------------------\n");
         //System.out.println("What class would you like to play?");
 
-        Hero hero = new Hero(heroChoice, subClassChoice,charName, 100, 100, 20);
-
-        System.out.println(hero.toString());
-
+        hero = new Hero(heroChoice, subClassChoice,charName, 100, 100, 20);
 
         sc.close();
     }

@@ -6,7 +6,7 @@ public class EnemyFactory {
 //            "Netrunner Operative", "Hangs back, hacks your gear/HUD mid-fight",
 //            "Bounty Hunter", "Tracks you specifically, adapts to your playstyle",
 //            "Black Market Surgeon", "Cowardly alone, buffs nearby enemies with implants"
-    public static Enemy createCropGuard() {
+    public static Enemy createCorpGuard() {
         return new HumanEnemy("Corp Guard", "Basic trained soldier, works in squads, calls backup","Franklin",100, 20, 10);
     }
 

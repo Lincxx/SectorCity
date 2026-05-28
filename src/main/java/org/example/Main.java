@@ -11,7 +11,6 @@ public class Main {
     static void main(String[] args) {
         GameManager game = new GameManager();
         game.startGame();
-        System.out.println(game.getHero()  );
 
 
 

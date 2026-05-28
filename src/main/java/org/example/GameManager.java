@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class GameManager {
     private Hero hero;
     private List<Enemy> enemies = new ArrayList<>();
+    private List<Chapter> chapters = new ArrayList<>();
 
     public void intro() {
         System.out.println("Welcome to Sector City");
@@ -23,7 +24,7 @@ public class GameManager {
     }
 
     public void setupEnemies() {
-        enemies.add(EnemyFactory.createCropGuard());
+        enemies.add(EnemyFactory.createCorpGuard());
         //enemies.add(EnemyFactory.createBountyHunter("Rex"));
     }
     public void setupHero() {
@@ -90,9 +91,36 @@ public class GameManager {
         //return enemies.get(index);
     }
 
+    public void setupChapters() {
+        chapters.add(new Chapter(
+                1,
+                "Welcome to Sector City",
+                "You wake up in a back alley, implants glitching...",
+                "Neon District",
+                List.of(EnemyFactory.createCorpGuard(), EnemyFactory.createRazorGangMember()),
+                "500 credits"
+        ));
+
+//        chapters.add(new Chapter(
+//                2,
+//                "The Underground",
+//                "You descend into the tunnels beneath the city...",
+//                "Underground Tunnels",
+//                List.of(EnemyFactory.createBountyHunter()),
+//                "Cyber implant upgrade"
+//        ));
+    }
+
     public void startGame() {
         setupHero();
         setupEnemies();
+        setupChapters();
+        // or access specific fields
+        Chapter currentChapter = chapters.get(0);
+        System.out.println(currentChapter.getTitle());
+        System.out.println(currentChapter.getLocation());
+        System.out.println(currentChapter.getDescription());
+
         System.out.println(getARandomEnemy());
 
         // run game loop
